@@ -47,13 +47,23 @@ portfolio/
 |       |-- project-hisaab.png
 |       |-- project-moto-tracker.png
 |       |-- project-utility-app.png
-|       `-- project-cinemood.png
+|       |-- project-cinemood.png
+|       |-- screenshot-desktop.png
+|       `-- screenshot-mobile.png
 `-- README.md
 ```
 
 ## Live Link
 
 https://cloudexify-web-p1-muzammilminhas-muzi47.vercel.app
+
+## Screenshots
+
+The repository includes the required desktop and mobile screenshots for CloudExify submission.
+
+| Desktop | Mobile |
+| --- | --- |
+| <img src="assets/images/screenshot-desktop.png" alt="Desktop screenshot of Muzammil Hayat Minhas portfolio" width="640"> | <img src="assets/images/screenshot-mobile.png" alt="Mobile screenshot of Muzammil Hayat Minhas portfolio" width="260"> |
 
 ## Links
 
