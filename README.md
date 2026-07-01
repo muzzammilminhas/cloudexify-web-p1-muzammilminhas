@@ -47,10 +47,11 @@ portfolio/
 
 ## Live Link
 
-To be added after Vercel deployment.
+https://cloudexify-web-p1-muzammilminhas-muzi47.vercel.app
 
 ## Links
 
+- Repository: https://github.com/muzzammilminhas/cloudexify-web-p1-muzammilminhas
 - GitHub: https://github.com/muzzammilminhas
 - LinkedIn: https://www.linkedin.com/in/muzzammilminhas
 - Email: muzzammilminhas5@gmail.com
