@@ -47,9 +47,12 @@ portfolio/
 |       |-- project-hisaab.png
 |       |-- project-moto-tracker.png
 |       |-- project-utility-app.png
-|       |-- project-cinemood.png
-|       |-- screenshot-desktop.png
-|       `-- screenshot-mobile.png
+|       `-- project-cinemood.png
+|-- screenshots/
+|   |-- desktop/
+|   |   `-- portfolio-desktop.png
+|   `-- mobile/
+|       `-- portfolio-mobile.png
 `-- README.md
 ```
 
@@ -63,7 +66,7 @@ The repository includes the required desktop and mobile screenshots for CloudExi
 
 | Desktop | Mobile |
 | --- | --- |
-| <img src="assets/images/screenshot-desktop.png" alt="Desktop screenshot of Muzammil Hayat Minhas portfolio" width="640"> | <img src="assets/images/screenshot-mobile.png" alt="Mobile screenshot of Muzammil Hayat Minhas portfolio" width="260"> |
+| <img src="screenshots/desktop/portfolio-desktop.png" alt="Desktop screenshot of Muzammil Hayat Minhas portfolio" width="640"> | <img src="screenshots/mobile/portfolio-mobile.png" alt="Mobile screenshot of Muzammil Hayat Minhas portfolio" width="260"> |
 
 ## Links
 
