@@ -198,11 +198,15 @@ main {
 .hero {
   min-height: calc(100vh - var(--header-height));
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.72fr);
   align-items: center;
-  gap: 54px;
+  gap: 46px;
   padding: 52px 0 44px;
   border-bottom: 1px solid var(--line);
+}
+
+.hero-copy {
+  min-width: 0;
 }
 
 .hero-meta {
@@ -223,10 +227,10 @@ p {
 
 h1 {
   margin-bottom: 24px;
-  max-width: 860px;
+  max-width: 760px;
   font-family: Newsreader, Georgia, serif;
-  font-size: clamp(64px, 10vw, 136px);
-  line-height: 0.82;
+  font-size: clamp(58px, 8.8vw, 118px);
+  line-height: 0.86;
   font-weight: 650;
 }
 
@@ -599,9 +603,17 @@ section:not(.hero) {
   line-height: 1.55;
 }
 
-.project-card button {
-  align-self: flex-start;
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
   margin-top: auto;
+}
+
+.project-actions button,
+.project-actions a {
+  align-self: flex-start;
   border: 0;
   border-bottom: 2px solid var(--accent);
   background: transparent;
@@ -609,6 +621,15 @@ section:not(.hero) {
   padding: 10px 0 4px;
   cursor: pointer;
   font-weight: 900;
+  font-size: 13px;
+}
+
+.project-actions a {
+  color: var(--muted);
+}
+
+.project-actions a:hover {
+  color: var(--accent);
 }
 
 .credential-grid {
@@ -822,6 +843,12 @@ section:not(.hero) {
   line-height: 1.65;
 }
 
+.dialog-body a {
+  border-bottom: 2px solid var(--accent);
+  color: var(--ink);
+  font-weight: 900;
+}
+
 .badge-toast {
   position: fixed;
   left: 50%;
@@ -952,7 +979,7 @@ section:not(.hero) {
   }
 
   h1 {
-    font-size: clamp(56px, 18vw, 86px);
+    font-size: clamp(52px, 16vw, 82px);
   }
 
   .hero-lede {

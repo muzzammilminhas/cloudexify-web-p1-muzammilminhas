@@ -17,6 +17,7 @@ Personal portfolio website for CloudExify Full Stack Web Development Internship 
 - Scroll-triggered animated skill bars
 - Live project filter
 - Project detail dialog using JavaScript-rendered data
+- Real project screenshots and GitHub repository links
 - Contact form validation
 - Smooth scroll and active navigation highlight
 - Hidden easter egg badge

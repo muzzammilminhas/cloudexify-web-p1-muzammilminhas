@@ -5,11 +5,13 @@ const projects = [
     tags: ["web", "supabase"],
     stack: ["React", "Vite", "Supabase", "PostgreSQL"],
     image: "assets/images/project-2026-notebook.png",
-    summary: "A World Cup 2026 PWA with official result tracking, what-if simulations, standings, brackets, prediction scoring, leaderboard, and community reveals.",
+    repoUrl: "https://github.com/muzzammilminhas/the-2026-notebook",
+    liveUrl: "https://muzzammilminhas.github.io/the-2026-notebook/",
+    summary: "A live World Cup 2026 results, prediction, and what-if notebook with official tables, personal scenarios, scoring, leaderboard, and account-backed predictions.",
     highlights: [
-      "Built a Supabase Cron and Edge Function pipeline that polls official data every minute.",
-      "Validated all 104 fixtures, cached official results, and audited result corrections.",
-      "Protected prediction access and scoring flows with Postgres RLS and server-side logic."
+      "README-backed feature set includes Actual, What If, Standings, Knockout, Leaderboard, Match Centre, Community Picks, Accounts, and Admin status.",
+      "Built a Supabase Cron and Edge Function sync pipeline for official result updates.",
+      "Protected prediction deadlines and scoring flows through server-side Supabase/Postgres logic."
     ]
   },
   {
@@ -18,11 +20,12 @@ const projects = [
     tags: ["mobile", "offline"],
     stack: ["Flutter", "Dart", "Hive", "Provider"],
     image: "assets/images/project-hisaab.png",
-    summary: "An offline-first trip expense app with trip/member CRUD, selected-person splits, balances, and simplified settlement payments.",
+    repoUrl: "https://github.com/muzzammilminhas/hisaab",
+    summary: "An offline-first Flutter app for trip expenses, members, selected-person splits, balances, and simplified settlement payments.",
     highlights: [
+      "README-backed features include trip/member CRUD, expense CRUD, per-person shares, member summaries, and simplified settlements.",
       "Implemented local Hive persistence with generated model adapters.",
-      "Designed Material 3 theming, dark mode, and practical mobile CRUD flows.",
-      "Added swipe-based edit/delete interactions and settlement simplification."
+      "Designed Material 3 light/dark UI with swipe actions for editing and deletion."
     ]
   },
   {
@@ -31,11 +34,12 @@ const projects = [
     tags: ["mobile", "offline"],
     stack: ["Flutter", "Dart", "Isar", "Riverpod"],
     image: "assets/images/project-moto-tracker.png",
-    summary: "A CG125 maintenance tracker for odometer readings, fuel logs, mileage, running costs, maintenance history, and service reminders.",
+    repoUrl: "https://github.com/muzzammilminhas/moto-tracker",
+    summary: "A dark mechanical CG125 companion app for odometer readings, fuel logs, running costs, mileage, maintenance history, and reminders.",
     highlights: [
-      "Used Isar for local database persistence and Riverpod for dashboard updates.",
-      "Built fuel, mileage, and cost calculations with chart-ready summaries.",
-      "Added maintenance history, image attachment support, and notification foundations."
+      "README-backed features include dashboard stats, fuel logging, maintenance logging, next-service tracking, and alert foundations.",
+      "Used Isar for local database persistence and Riverpod for reactive dashboard updates.",
+      "Built mileage, cost, range, monthly expense, and service interval calculations."
     ]
   },
   {
@@ -44,11 +48,12 @@ const projects = [
     tags: ["mobile", "supabase"],
     stack: ["Flutter", "Supabase", "Provider"],
     image: "assets/images/project-utility-app.png",
-    summary: "A multi-module authenticated toolkit with QR business cards, scanning, conversion tools, audio recording, uploads, and admin analytics.",
+    repoUrl: "https://github.com/muzzammilminhas/personal_utility_app",
+    summary: "A Supabase-authenticated productivity toolkit with QR business cards, scanning history, unit conversion, audio notes, and admin analytics.",
     highlights: [
-      "Built Supabase authentication, password-reset deep links, and user/admin routing.",
-      "Implemented QR business card CRUD, QR generation/scanning, and scan history.",
-      "Added audio recording upload/playback and role-aware admin analytics."
+      "README-backed features include Supabase Auth, user/admin routing, admin table access, and password reset deep links.",
+      "Implemented QR card CRUD, QR generation/scanning, scan history, and unit conversion.",
+      "Added private Supabase Storage audio upload/playback and admin activity dashboards."
     ]
   },
   {
@@ -57,11 +62,12 @@ const projects = [
     tags: ["web"],
     stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "TMDB API"],
     image: "assets/images/project-cinemood.png",
-    summary: "A responsive movie discovery app using mood filters, runtime/year/intensity preferences, search, details, trailers, ratings, and watch providers.",
+    repoUrl: "https://github.com/muzzammilminhas/cinemood",
+    summary: "A retro VHS-themed movie recommendation web app using mood filters, TMDB discovery, details, trailers, ratings, and watch providers.",
     highlights: [
-      "Added local watchlist, disliked/watched states, history, settings, and region preferences.",
-      "Created shareable recommendation flows and theme switching.",
-      "Connected search and detail views to API-driven movie data."
+      "README-backed features include mood-based recommendations, search, movie details, posters, trailers, and regional watch providers.",
+      "Added local watchlist, disliked/watched states, watched history, and persisted preferences.",
+      "Built responsive navigation, theme settings, sharing, and local data clearing flows."
     ]
   }
 ];
@@ -100,7 +106,11 @@ function renderProjects(filter = "all") {
         </div>
         <h3>${project.title}</h3>
         <p>${project.summary}</p>
-        <button type="button" data-project="${project.title}">Open build note</button>
+        <div class="project-actions">
+          <button type="button" data-project="${project.title}">Open build note</button>
+          <a href="${project.repoUrl}" target="_blank" rel="noreferrer">GitHub</a>
+          ${project.liveUrl ? `<a href="${project.liveUrl}" target="_blank" rel="noreferrer">Live</a>` : ""}
+        </div>
       </div>
     </article>
   `).join("");
@@ -117,7 +127,7 @@ function openProject(title) {
   document.getElementById("dialogDescription").textContent = project.summary;
   document.getElementById("dialogHighlights").innerHTML = project.highlights
     .map((item) => `<li>${item}</li>`)
-    .join("");
+    .join("") + `<li><a href="${project.repoUrl}" target="_blank" rel="noreferrer">Read the source README on GitHub</a></li>`;
 
   if (typeof projectDialog.showModal === "function") {
     projectDialog.showModal();
