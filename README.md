@@ -21,28 +21,33 @@ Personal portfolio website for CloudExify Full Stack Web Development Internship 
 - Smooth scroll and active navigation highlight
 - Hidden easter egg badge
 - Downloadable resume button
+- Coursera and Google Skills certificate links
 
 ## Project Structure
 
 ```text
 portfolio/
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-├── assets/
-│   ├── docs/
-│   │   ├── Muzammil_Minhas_Resume.docx
-│   │   └── Muzammil_Minhas_Resume.pdf
-│   └── images/
-│       ├── concept-swiss-editorial.png
-│       ├── project-2026-notebook.png
-│       ├── project-hisaab.png
-│       ├── project-moto-tracker.png
-│       ├── project-utility-app.png
-│       └── project-cinemood.png
-└── README.md
+|-- index.html
+|-- css/
+|   `-- style.css
+|-- js/
+|   `-- script.js
+|-- assets/
+|   |-- docs/
+|   |   |-- Muzammil_Minhas_Resume.docx
+|   |   |-- Muzammil_Minhas_Resume.pdf
+|   |   `-- certificates/
+|   |       |-- coursera-discover-the-art-of-prompting.pdf
+|   |       |-- coursera-introduction-to-ai.pdf
+|   |       `-- coursera-maximize-productivity-with-ai-tools.pdf
+|   `-- images/
+|       |-- concept-swiss-editorial.png
+|       |-- project-2026-notebook.png
+|       |-- project-hisaab.png
+|       |-- project-moto-tracker.png
+|       |-- project-utility-app.png
+|       `-- project-cinemood.png
+`-- README.md
 ```
 
 ## Live Link
