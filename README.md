@@ -7,12 +7,12 @@ Personal portfolio website for CloudExify Full Stack Web Development Internship 
 - Name: Muzammil Hayat Minhas
 - Registration Number: CX-INT-2026-GEN-0195
 - Project: Personal Portfolio Website
-- Build Track: Glass & Gradient
+- Build Track: Swiss Editorial
 - Tech Stack: HTML5, CSS3, Vanilla JavaScript
 
 ## Signature Features
 
-- Premium animated hero with cinematic intro veil
+- Premium Swiss editorial hero with graceful intro reveal
 - Real project preview reel in the first viewport
 - Typewriter hero intro
 - Scroll progress indicator
@@ -20,7 +20,7 @@ Personal portfolio website for CloudExify Full Stack Web Development Internship 
 - Scroll-triggered animated skill bars
 - Live project filter
 - Project detail dialog using JavaScript-rendered data
-- Pointer-reactive project cards and cursor glow
+- Soft editorial hover states and cursor wash
 - Real project screenshots and GitHub repository links
 - Contact form validation
 - Smooth scroll and active navigation highlight
@@ -46,7 +46,6 @@ portfolio/
 |   |       |-- coursera-introduction-to-ai.pdf
 |   |       `-- coursera-maximize-productivity-with-ai-tools.pdf
 |   `-- images/
-|       |-- concept-premium-world.png
 |       |-- concept-swiss-editorial.png
 |       |-- project-2026-notebook.png
 |       |-- project-hisaab.png

@@ -140,7 +140,7 @@ function openProject(title) {
 function setTheme(theme) {
   document.documentElement.dataset.theme = theme;
   localStorage.setItem("portfolio-theme", theme);
-  themeLabel.textContent = theme === "dark" ? "Studio" : "Focus";
+  themeLabel.textContent = theme === "dark" ? "Noir" : "Editorial";
 }
 
 function startTypewriter() {
@@ -185,7 +185,7 @@ function showBadge() {
 
 renderProjects();
 startTypewriter();
-setTheme(localStorage.getItem("portfolio-theme") || "dark");
+setTheme(localStorage.getItem("portfolio-theme") || "light");
 
 window.addEventListener("load", () => {
   setTimeout(() => introVeil.classList.add("hidden"), 650);
@@ -199,7 +199,7 @@ window.addEventListener("scroll", () => {
 
 window.addEventListener("pointermove", (event) => {
   if (!cursorLight || window.matchMedia("(pointer: coarse)").matches) return;
-  cursorLight.style.opacity = "1";
+  cursorLight.style.opacity = "0.85";
   cursorLight.style.transform = `translate(${event.clientX - 140}px, ${event.clientY - 140}px)`;
 }, { passive: true });
 
