@@ -89,6 +89,9 @@ const typedText = document.getElementById("typedText");
 const projectDialog = document.getElementById("projectDialog");
 const dialogClose = document.getElementById("dialogClose");
 const badgeToast = document.getElementById("badgeToast");
+const introVeil = document.getElementById("introVeil");
+const scrollProgress = document.getElementById("scrollProgress");
+const cursorLight = document.getElementById("cursorLight");
 
 function renderProjects(filter = "all") {
   const visibleProjects = filter === "all"
@@ -182,7 +185,23 @@ function showBadge() {
 
 renderProjects();
 startTypewriter();
-setTheme(localStorage.getItem("portfolio-theme") || "light");
+setTheme(localStorage.getItem("portfolio-theme") || "dark");
+
+window.addEventListener("load", () => {
+  setTimeout(() => introVeil.classList.add("hidden"), 650);
+});
+
+window.addEventListener("scroll", () => {
+  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = scrollable <= 0 ? 0 : (window.scrollY / scrollable) * 100;
+  scrollProgress.style.width = `${progress}%`;
+}, { passive: true });
+
+window.addEventListener("pointermove", (event) => {
+  if (!cursorLight || window.matchMedia("(pointer: coarse)").matches) return;
+  cursorLight.style.opacity = "1";
+  cursorLight.style.transform = `translate(${event.clientX - 140}px, ${event.clientY - 140}px)`;
+}, { passive: true });
 
 navToggle.addEventListener("click", () => {
   const isOpen = navLinks.classList.toggle("open");
@@ -216,6 +235,23 @@ projectGrid.addEventListener("click", (event) => {
   const button = event.target.closest("[data-project]");
   if (!button) return;
   openProject(button.dataset.project);
+});
+
+projectGrid.addEventListener("pointermove", (event) => {
+  const card = event.target.closest(".project-card");
+  if (!card) return;
+  const rect = card.getBoundingClientRect();
+  const x = ((event.clientX - rect.left) / rect.width - 0.5) * 10;
+  const y = ((event.clientY - rect.top) / rect.height - 0.5) * -10;
+  card.style.setProperty("--tilt-x", `${x.toFixed(2)}deg`);
+  card.style.setProperty("--tilt-y", `${y.toFixed(2)}deg`);
+});
+
+projectGrid.addEventListener("pointerleave", () => {
+  document.querySelectorAll(".project-card").forEach((card) => {
+    card.style.removeProperty("--tilt-x");
+    card.style.removeProperty("--tilt-y");
+  });
 });
 
 dialogClose.addEventListener("click", () => projectDialog.close());

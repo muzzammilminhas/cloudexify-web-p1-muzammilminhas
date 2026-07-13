@@ -9,9 +9,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,650&display=swap" rel="stylesheet">
+  <script>
+    document.documentElement.dataset.theme = localStorage.getItem("portfolio-theme") || "dark";
+  </script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="intro-veil" id="introVeil" aria-hidden="true">
+    <span>Initializing portfolio</span>
+    <strong>Muzammil Minhas</strong>
+  </div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="cursor-light" id="cursorLight" aria-hidden="true"></div>
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header" id="top">
@@ -89,7 +98,33 @@
           <span style="height: 92%"></span>
           <span style="height: 63%"></span>
         </div>
+        <div class="hero-reel" aria-label="Real project previews">
+          <img src="assets/images/project-2026-notebook.png" alt="The 2026 Notebook project preview">
+          <img src="assets/images/project-hisaab.png" alt="Hisaab app preview">
+          <img src="assets/images/project-moto-tracker.png" alt="Moto Tracker app preview">
+        </div>
       </aside>
+    </section>
+
+    <section class="tech-marquee section-observe" aria-label="Technology stack">
+      <div class="marquee-track">
+        <span>Flutter</span>
+        <span>React</span>
+        <span>Supabase</span>
+        <span>Postgres RLS</span>
+        <span>Offline-first</span>
+        <span>Edge Functions</span>
+        <span>JavaScript</span>
+        <span>Product UI</span>
+        <span>Flutter</span>
+        <span>React</span>
+        <span>Supabase</span>
+        <span>Postgres RLS</span>
+        <span>Offline-first</span>
+        <span>Edge Functions</span>
+        <span>JavaScript</span>
+        <span>Product UI</span>
+      </div>
     </section>
 
     <section class="about section-observe" id="about" aria-labelledby="aboutTitle">

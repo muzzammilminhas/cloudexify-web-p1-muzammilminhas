@@ -12,11 +12,15 @@ Personal portfolio website for CloudExify Full Stack Web Development Internship 
 
 ## Signature Features
 
+- Premium animated hero with cinematic intro veil
+- Real project preview reel in the first viewport
 - Typewriter hero intro
+- Scroll progress indicator
 - Live theme switcher saved with localStorage
 - Scroll-triggered animated skill bars
 - Live project filter
 - Project detail dialog using JavaScript-rendered data
+- Pointer-reactive project cards and cursor glow
 - Real project screenshots and GitHub repository links
 - Contact form validation
 - Smooth scroll and active navigation highlight
@@ -42,6 +46,7 @@ portfolio/
 |   |       |-- coursera-introduction-to-ai.pdf
 |   |       `-- coursera-maximize-productivity-with-ai-tools.pdf
 |   `-- images/
+|       |-- concept-premium-world.png
 |       |-- concept-swiss-editorial.png
 |       |-- project-2026-notebook.png
 |       |-- project-hisaab.png
