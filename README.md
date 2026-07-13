@@ -7,7 +7,7 @@ Personal portfolio website for CloudExify Full Stack Web Development Internship 
 - Name: Muzammil Hayat Minhas
 - Registration Number: CX-INT-2026-GEN-0195
 - Project: Personal Portfolio Website
-- Build Track: Swiss Editorial
+- Build Track: Glass & Gradient
 - Tech Stack: HTML5, CSS3, Vanilla JavaScript
 
 ## Signature Features
